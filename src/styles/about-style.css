@@ -152,11 +152,9 @@ body {
 }
 
 .main-image {
-  position: absolute;
   top: 0;
   right: 0;
-  z-index: -1;
-  max-width: 50%;
+  z-index: 1;
 }
 
 /* Медиа-запросы для мобильных устройств */

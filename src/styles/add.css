@@ -63,6 +63,7 @@ dialog menu {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    align-items: center;
 }
 
 #task-dialog button {
