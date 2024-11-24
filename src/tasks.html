@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Список задач</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/tasks-style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.ico"
+      type="image/x-icon"
+    />
+    <script defer src="scripts/burger.js"></script>
+    <link rel="icon" href="images/favicon-32x32.ico" type="Image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <button class="header-burger-btn" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo" class="Logo" />
+        </div>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a href="main.html">Главная</a>
+            </li>
+            <li class="navigation-item">
+              <a href="projects.html" class="button">Проекты</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-selected button">Список задач</a>
+            </li>
+            <li class="navigation-item">
+              <a href="about.html">О приложении</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="main-content">
+      <div class="container">
+        <div class="table-info">
+          <h1 class="main-title">Задачи</h1>
+          <a href="add.html" class="button">Добавить новую задачу</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="main-table">
+          <div class="task-column">
+            <h2>Задачи</h2>
+            <div class="task-item">
+              <input type="checkbox" /> Задача 1
+              <button class="button delete-btn">Удалить</button>
+            </div>
+            <div class="task-item">
+              <input type="checkbox" /> Задача 2
+              <button class="button delete-btn">Удалить</button>
+            </div>
+          </div>
+        
+          <div class="task-column">
+            <h2>В процессе</h2>
+            <div class="task-item">
+              <input type="checkbox" /> Задача 3
+              <button class="button delete-btn">Удалить</button>
+            </div>
+            <div class="task-item">
+              <input type="checkbox" /> Задача 4
+              <button class="button delete-btn">Удалить</button>
+            </div>
+          </div>
+        
+          <div class="task-column">
+            <h2>Выполнены</h2>
+            <div class="task-item completed">
+              <input type="checkbox" /> Задача 5
+              <button class="button delete-btn">Удалить</button>
+            </div>
+            <div class="task-item completed">
+              <input type="checkbox" /> Задача 6
+              <button class="button delete-btn">Удалить</button>
+            </div>
+          </div>
+        </div>        
+        </div>
+      </div>
+    </section>
+    <script src="bundle.js"></script>
+  </body>
+</html>
