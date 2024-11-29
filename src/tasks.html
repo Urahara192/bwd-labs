@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Список задач</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список задач</title>
     <link rel="stylesheet" href="styles/tasks-style.css" />
     <link
       rel="shortcut icon"
@@ -11,7 +11,7 @@
       type="image/x-icon"
     />
     <script defer src="scripts/burger.js"></script>
-    <link rel="icon" href="images/favicon-32x32.ico" type="Image/x-icon" />
+    <link rel="icon" href="images/favicon-32x32.ico" type="image/x-icon" />
   </head>
   <body>
     <header class="header">
@@ -24,18 +24,10 @@
         </div>
         <nav class="navigation">
           <ul class="navigation-list">
-            <li class="navigation-item">
-              <a href="main.html">Главная</a>
-            </li>
-            <li class="navigation-item">
-              <a href="projects.html" class="button">Проекты</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-selected button">Список задач</a>
-            </li>
-            <li class="navigation-item">
-              <a href="about.html">О приложении</a>
-            </li>
+            <li class="navigation-item"><a href="main.html">Главная</a></li>
+            <li class="navigation-item"><a href="projects.html" class="button">Проекты</a></li>
+            <li class="navigation-item"><a class="navigation-selected button">Список задач</a></li>
+            <li class="navigation-item"><a href="about.html">О приложении</a></li>
           </ul>
         </nav>
       </div>
@@ -45,50 +37,52 @@
       <div class="container">
         <div class="table-info">
           <h1 class="main-title">Задачи</h1>
-          <a href="add.html" class="button">Добавить новую задачу</a>
+          <button id="open-dialog-btn" class="button">Добавить новую задачу</button>
         </div>
       </div>
       <div class="container">
         <div class="main-table">
-          <div class="task-column">
+          <div class="task-column" id="tasks-column">
             <h2>Задачи</h2>
-            <div class="task-item">
-              <input type="checkbox" /> Задача 1
-              <button class="button delete-btn">Удалить</button>
-            </div>
-            <div class="task-item">
-              <input type="checkbox" /> Задача 2
-              <button class="button delete-btn">Удалить</button>
-            </div>
+            <button id="sort-tasks" class="button">Сортировать по приоритету</button>
+            <!-- Задачи будут добавляться сюда динамически -->
           </div>
-        
-          <div class="task-column">
+
+          <div class="task-column" id="in-progress-column">
             <h2>В процессе</h2>
-            <div class="task-item">
-              <input type="checkbox" /> Задача 3
-              <button class="button delete-btn">Удалить</button>
-            </div>
-            <div class="task-item">
-              <input type="checkbox" /> Задача 4
-              <button class="button delete-btn">Удалить</button>
-            </div>
+            <button id="sort-in-progress" class="button">Сортировать по приоритету</button>
+            <!-- Задачи будут добавляться сюда динамически -->
           </div>
-        
-          <div class="task-column">
+
+          <div class="task-column" id="completed-column">
             <h2>Выполнены</h2>
-            <div class="task-item completed">
-              <input type="checkbox" /> Задача 5
-              <button class="button delete-btn">Удалить</button>
-            </div>
-            <div class="task-item completed">
-              <input type="checkbox" /> Задача 6
-              <button class="button delete-btn">Удалить</button>
-            </div>
+            <button id="sort-completed" class="button">Сортировать по приоритету</button>
+            <!-- Задачи будут добавляться сюда динамически -->
           </div>
-        </div>        
         </div>
       </div>
     </section>
+
+    <dialog id="task-dialog">
+      <form method="dialog">
+        <label for="task-name">Введите задачу:</label>
+        <input type="text" id="task-name" class="enter" required />
+
+        <label for="task-priority">Выберите приоритет:</label>
+        <select id="task-priority">
+          <option value="low">Низкий</option>
+          <option value="medium">Средний</option>
+          <option value="high">Высокий</option>
+        </select>
+        <div class="button-container">
+          <button id="submit-task-btn" class="button">Добавить</button>
+          <button id="close-dialog-btn" class="button">Отмена</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="scripts/modal.js"></script>
     <script src="bundle.js"></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

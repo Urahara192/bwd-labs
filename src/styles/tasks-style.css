@@ -133,6 +133,22 @@ body {
   background-color: #218838;
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Распределяет кнопки с отступами между ними */
+  gap: 10px; /* Отступы между кнопками */
+  margin-top: 20px; /* Отступ сверху */
+  width: 100%; /* Чтобы контейнер занимал всю ширину */
+}
+
+.button-container button {
+  max-width: 150px; /* Максимальная ширина кнопок */
+  padding: 12px 25px; /* Отступы внутри кнопок */
+  font-size: 16px; /* Размер шрифта для кнопок */
+  border-radius: 5px; /* Скругленные углы */
+  border: none; /* Убираем рамку у кнопок */
+}
+
 .delete-btn {
   background-color: #e62828;
   border: none;
